@@ -29,7 +29,7 @@ void setup()
 class Utils
 {
 public:
-    static void drawTitleScreen(unsigned char index)
+    static void drawTitleScreen(unsigned char index, int Hand_pos)
     {
         gfx_FillScreen(255);
         
@@ -56,7 +56,7 @@ public:
         gfx_Sprite(ButtonContinue, 135, 218);
         gfx_Sprite(ButtonOptions, 235, 218);
 
-        gfx_RLETSprite(Hand, 130 - Hand_width, 221);
+        gfx_RLETSprite(Hand, Hand_pos - Hand_width, 221);
 
         gfx_BlitBuffer();
     }
@@ -86,9 +86,9 @@ public:
     {
         kb_lkey_t keys[6] = { kb_KeyLeft, kb_KeyRight, kb_KeyUp, kb_KeyDown, kb_Key2nd };
         
-        if (index > 4)
+        if (index > 4) {
             return false;
-
+        }
         return kb_IsDown(keys[index]);
     }
 
