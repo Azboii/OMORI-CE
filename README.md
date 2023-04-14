@@ -6,7 +6,7 @@ A port of OMORI to the TI-84 Plus CE
 
 ### Current Progress:
 - [x] Main Menu
-- [ ] Whitespace - Current Working On
+- [ ] Whitespace - Currently Working On
 - [ ] Playground Area
 
 ## Contributing
